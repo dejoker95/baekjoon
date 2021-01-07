@@ -8,7 +8,7 @@ def primeList(n):
                 prime[j] = False
     return [i for i in range(2, n) if prime[i] == True]
 
-def getPrime(n, prime):
+def getPrime(n):
     prime = primeList(n)
     idx = max([i for i in range(len(prime)) if prime[i] <= n/2])
     for i in range(idx, -1, -1):
