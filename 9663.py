@@ -1,9 +1,10 @@
 import sys
 
-# N = int(sys.stdin.readline())
-N = 8
+N = int(sys.stdin.readline())
+
 count = 0
 board = [0 for i in range(N)]
+
 
 def check(cnt):
     if cnt == 0:
@@ -23,8 +24,8 @@ def dfs(cnt):
     for i in range(N):
         board[cnt] = i
         if check(cnt):
-            dfs(cnt+1)
-        
+            dfs(cnt + 1)
+
 
 dfs(0)
 print(count)
