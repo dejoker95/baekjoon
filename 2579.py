@@ -1,11 +1,11 @@
 import sys
 
 n = int(sys.stdin.readline())
-steps = []
-score = [0 for i in range(n)]
+steps = [0 for i in range(301)]
+score = [0 for i in range(301)]
 
 for i in range(n):
-    steps.append(int(sys.stdin.readline()))
+    steps[i] = int(sys.stdin.readline())
 
 
 score[0] = steps[0]
