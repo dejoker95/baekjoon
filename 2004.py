@@ -1,25 +1,23 @@
 n, m = map(int, input().split())
 
 
-def count_five(n):
+def count_two(n):
     count = 0
-    for i in range(1, n + 1):
-        if i % 5 == 0:
-            num = i
-            while True:
-                count += 1
-                num /= 5
-                if num % 5 != 0:
-                    break
+    while n != 0:
+        n //= 2
+        count += n
     return count
 
 
-ans = 0
-if m == 0:
-    ans = 0
-elif n == 1:
-    ans = 0
-else:
-    ans = count_five(n) - (count_five(m) + count_five(n - m))
+def count_five(n):
+    count = 0
+    while n != 0:
+        n //= 5
+        count += n
+    return count
 
-print(ans)
+
+two = count_two(n) - count_two(m) - count_two(n - m)
+five = count_five(n) - count_five(m) - count_five(n - m)
+
+print(min(two, five))
