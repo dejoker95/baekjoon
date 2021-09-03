@@ -4,6 +4,10 @@ N = int(sys.stdin.readline())
 nums = [int(sys.stdin.readline()) for i in range(N)]
 
 nums.sort()
+print("nums:", nums)
+if len(nums) == 1:
+    print(0)
+    exit()
 
 ans = (len(nums) - 1) * nums[0]
 
