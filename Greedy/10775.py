@@ -28,5 +28,4 @@ for plane in planes:
         break
     union(x, x - 1)
     count += 1
-print(parent)
 print(count)
