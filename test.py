@@ -1,12 +1,14 @@
-numbers = [30, 3, 34, 5, 9, 990, 99]
+import sys
 
+N = int(sys.stdin.readline())
+A = list(map(int, sys.stdin.readline().split()))
+ans = [-1] * N
+stack = [0]
 
-def change(n):
-    n = list(str(n))
-    n.insert(1, ".")
-    n = "".join(n)
-    return float(n)
+for i in range(1, N):
+    while stack and A[stack[-1]] < A[i]:
+        ans[stack[-1]] = A[i]
+        stack.pop()
+    stack.append(i)
 
-
-numbers.sort(key=lambda x: (change(x), -len(str(x))), reverse=True)
-print(numbers)
+print(*ans)
