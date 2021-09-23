@@ -1,15 +1,6 @@
 import sys
 from collections import deque
 
-read = sys.stdin.readline
-
-N, M = map(int, read().split())
-
-board = [list(map(int, list(read().strip()))) for _ in range(N)]
-
-for b in board:
-    print(*b)
-
 
 def bfs():
     visited = [[0] * M for _ in range(N)]
@@ -40,4 +31,8 @@ def bfs():
                 visited[i][j + 1] = 1
 
 
-print(bfs())
+if __name__ == "__main__":
+    read = sys.stdin.readline
+    N, M = map(int, read().split())
+    board = [list(map(int, list(read().strip()))) for _ in range(N)]
+    print(bfs())
