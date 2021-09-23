@@ -3,6 +3,7 @@ import heapq as hq
 
 def solution(jobs):
     heap = []
+    jobs.sort(key=lambda x: x[0])
     t = 0
     total = 0
     idx = 0
