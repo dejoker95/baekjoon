@@ -36,8 +36,6 @@ if __name__ == "__main__":
 
     bfs(graph, visited)
 
-    for g in graph:
-        print(*g)
     ans = -1
     for i in range(N):
         for j in range(M):
