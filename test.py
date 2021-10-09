@@ -1,5 +1,7 @@
-x = [-1, 1, 0, 0]
-y = [0, 0, -1, 1]
-
-for i, j in zip(x, y):
-    print(i, j)
+cnt = 0
+while True:
+    cnt += 1
+    print(cnt)
+    for i in range(10):
+        if i > 7:
+            break
